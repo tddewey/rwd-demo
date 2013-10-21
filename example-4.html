@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example 4: Media Queries / Responsive step 3</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="normalize.css">
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			background-color: #efefef;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		.container {
+			max-width: 960px;
+			margin: 0 auto;
+		}
+
+		.header {
+			width: 100%;
+			background-color: #fff;
+			padding: 10px;
+			margin-bottom: 3.125%;
+		}
+
+		.links {
+			text-align: right;
+		}
+
+		.links a {
+			margin-right: 3.125%;
+			position: relative;
+		}
+
+		.links a.active:after {
+			position: absolute;
+			top: -.6em;
+			left: 50%;
+			margin-left: -4px;
+			content: ' ';
+			border: 8px solid transparent;
+			border-top-color: #ccc;
+		}
+
+		.header h1 {
+			clear: both;
+		}
+
+		.main {
+			background-color: #fff;
+			padding: 20px;
+			margin-bottom: 3.125%;
+		}
+
+		.sidebar {
+			background-color: #fff;
+			padding: 20px;
+			margin-bottom: 3.125%;
+		}
+
+		@media screen and (min-width: 600px) {
+			.sidebar {
+				width: 31.25%; /* 300/960 */
+				float: left;
+			}
+
+			.main {
+				width: 65.625%; /* 630/960 */
+				margin-right: 3.125%;
+				float: left;
+			}
+
+		}
+
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="header">
+		<div class="links">
+			<a href="example-1.html">Example 1</a>
+			<a href="example-2.html">Example 2</a>
+			<a href="example-3.html">Example 3</a>
+			<a href="example-4.html" class="active">Example 4</a>
+		</div>
+
+		<h1>Header</h1>
+	</div>
+	<div class="main">
+		<h2>Neatly Placed Image</h2>
+		<img src="http://placehold.it/590x300" width="590" height="300">
+	</div>
+	<div class="sidebar">
+		Sidebar
+	</div>
+</div>
+</body>
+</html>

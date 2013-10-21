@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example 1: Fixed Columns</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="normalize.css">
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			background-color: #efefef;
+		}
+
+		.container {
+			width: 960px;
+			margin: 0 auto;
+		}
+
+		.header {
+			width: 960px;
+			background-color: #fff;
+			padding: 10px;
+			margin-bottom: 30px;
+		}
+
+		.links {
+			text-align: right;
+		}
+
+		.links a {
+			margin-right: 3.125%;
+			position: relative;
+		}
+
+		.links a.active:after {
+			position: absolute;
+			top: -.6em;
+			left: 50%;
+			margin-left: -4px;
+			content: ' ';
+			border: 8px solid transparent;
+			border-top-color: #ccc;
+		}
+
+		.header h1 {
+			clear: both;
+		}
+
+		.main {
+			width: 630px;
+			margin-right: 30px;
+			background-color: #fff;
+			padding: 20px;
+			float: left;
+		}
+
+		.sidebar {
+			width: 300px;
+			float: left;
+			background-color: #fff;
+			padding: 20px;
+		}
+
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="header">
+		<div class="links">
+			<a href="example-1.html" class="active">Example 1</a>
+			<a href="example-2.html">Example 2</a>
+			<a href="example-3.html">Example 3</a>
+			<a href="example-4.html">Example 4</a>
+		</div>
+		<h1>Header</h1>
+	</div>
+	<div class="main">
+		<h2>Neatly Placed Image</h2>
+		<img src="http://placehold.it/590x300" width="590" height="300">
+	</div>
+	<div class="sidebar">
+		<p>
+			This is a fixed width layout based on a 960px grid.
+		</p>
+		<p>
+			Try resizing the browser. Note how the right edge gets cut off.
+		</p>
+	</div>
+</div>
+</body>
+</html>
